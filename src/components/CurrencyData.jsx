@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react";
 import Currency from "./Currency";
+import { useOutletContext } from "react-router-dom";
 
 function CurrencyData() {
-  const [dataBase, setDataBase] = useState(null);
-
-  useEffect(() => {
-    fetch("https://www.cbr-xml-daily.ru/daily_json.js")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setDataBase(data);
-      })
-      .catch((error) => console.log(error.message));
-  }, []);
+  const Valute = useOutletContext();
 
   return (
-    <div className="currency">
-      {dataBase &&
-        Object.entries(dataBase.Valute).map((data) => {
+    <>
+      <h1>Currency</h1>
+      <div className="currency">
+        {Object.entries(Valute).map((data) => {
           return <Currency key={data[1].ID} data={data[1]} />;
         })}
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Converter from "./components/Converter";
+import ConverterData from "./components/ConverterData";
 import MainLayout from "./Main/MainLayout";
 import "./App.css";
 import CurrencyData from "./components/CurrencyData";
@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route index element={<Converter />} />
+            <Route index element={<ConverterData />} />
             <Route path="currency" element={<CurrencyData />} />
           </Route>
         </Routes>
