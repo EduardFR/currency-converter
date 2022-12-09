@@ -55,3 +55,35 @@ button:hover {
 button:active {
   background-color: greenyellow;
 }
+
+.valuteBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: darkslategray;
+
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.valuteName {
+  background-color: rgb(83, 106, 42);
+  border-right: 5px solid black;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+p div {
+  background-color: rgb(83, 106, 42);
+  display: inline;
+  padding: 10px;
+
+  border-left: 5px solid black;
+  border-radius: 2px;
+}
+
+.currency {
+  margin: 0 auto;
+  max-width: 800px;
+}

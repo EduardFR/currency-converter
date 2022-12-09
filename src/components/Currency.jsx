@@ -1,10 +1,13 @@
-function Currency({ currency, data }) {
-  const { Name, Value, Previous } = data;
+function Currency({ data }) {
+  const { Name, Value, CharCode } = data;
   return (
     <div className="valuteBlock">
-      <div>
-        {Name} Курс на данный момент: {Value}
+      <div className="valuteName">
+        {Name} ({CharCode})
       </div>
+      <p>
+        Курс на данный момент: <div>{Value}</div>
+      </p>
     </div>
   );
 }

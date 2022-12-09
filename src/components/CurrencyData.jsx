@@ -15,12 +15,10 @@ function CurrencyData() {
   }, []);
 
   return (
-    <div>
+    <div className="currency">
       {dataBase &&
         Object.entries(dataBase.Valute).map((data) => {
-          return (
-            <Currency key={data[1].ID} currency={data[0]} data={data[1]} />
-          );
+          return <Currency key={data[1].ID} data={data[1]} />;
         })}
     </div>
   );
