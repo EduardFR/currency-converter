@@ -61,10 +61,9 @@ button:active {
 .valuteBlock {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-top: 10px;
   background-color: darkslategray;
-
+  justify-content: space-between;
   border: 5px solid black;
   border-radius: 10px;
 }
@@ -76,7 +75,7 @@ button:active {
   padding: 10px;
 }
 
-p span {
+.valuteBlock p span {
   background-color: rgb(83, 106, 42);
   display: inline;
   padding: 10px;
@@ -92,13 +91,32 @@ p span {
 
 .dropdown {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
   overflow: hidden;
+}
+
+.dropdown p {
+  font-size: 40px;
+  color: black;
+}
+
+.dropdown input {
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  background-color: darkslategray;
+  border: 5px solid black;
+  border-radius: 10px;
+  max-width: 100px;
 }
 
 .dropdown-content {
   display: none;
-  max-width: 120px;
+  position: absolute;
+  margin-left: 20px;
+  min-width: 100px;
   max-height: 210px;
   z-index: 1;
 }
@@ -106,7 +124,6 @@ p span {
 .dropdown-content.show {
   display: block;
   overflow: scroll;
-  margin: auto;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 }
@@ -116,6 +133,7 @@ p span {
   border: 5px solid black;
   border-radius: 10px;
   background-color: darkslategray;
+  color: black;
   cursor: pointer;
   float: none;
 }
